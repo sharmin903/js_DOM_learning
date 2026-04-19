@@ -1,0 +1,52 @@
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: "Gillroy";
+    background-color: black;
+    color: white;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    padding: 15%;
+    font-size: 4rem;
+}
+input{
+    display: none;
+}
+#btn{
+    padding: 12px 22px;
+    background-color: chocolate;
+    border-radius: 5px;
+}
+#btn:hover{
+    background-color: brown;
+    cursor: pointer;
+    transition: 0.8s;
+}
+h1{
+    color: #555;
+    font-weight: 300;
+    user-select: none;
+}
+#color{
+    position: absolute;
+    background-color: color-mix(in xyz, red 40%, pink 50%);
+    height: 50px;
+    width: 100px;
+    padding: 50px;
+}
+.lt{
+    text-decoration: line-through;
+}*/
+body{
+    background-color: black;
+    color: white;
+}
