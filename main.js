@@ -57,10 +57,42 @@ input.addEventListener("input",function(dets){
     else{
         span.style.color= "white";
     }
-})*/
+})
 let nm= document.querySelector("#name");
 let form= document.querySelector("form");
 
 form.addEventListener("submit",function(dets){
-    
+    dets.preventDefault();
+
+    if(nm.value.length <= 2){
+        document.querySelector("#hide").style.display="initial";
+    }
+    else{
+        document.querySelector("#hide").style.display="none";
+    }
+
+})*/
+
+function createToaster(config){
+    return function(str){
+        let div = document.createElement("div");
+        div.textContent=str;
+        div.className= "inline-block bg-gray-800 text-white px-6 py-3 rounded shadow-lg pointer-events-none transition-opacity duration-300";
+        document.querySelector(".parents").appendChild(div);
+        setTimeout(() =>{
+            document.querySelector(".parents").removeChild(div);
+        },config.duration*10000);
+
+    }
+
+}
+let toaster=createToaster({
+    positionX:"right",
+    positionY:"top",
+    theme:"dark",
+    duration:3,
 })
+toaster("downlode done !");
+setTimeout(()=>{
+    toaster("Nabila accepted ur requested");
+},2000);
