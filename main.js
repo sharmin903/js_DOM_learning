@@ -1,4 +1,4 @@
-/*let sel = document.querySelector("select");
+let sel = document.querySelector("select");
 let device=document.querySelector("#device");
 
 sel.addEventListener("change",function(dets){
@@ -71,7 +71,7 @@ form.addEventListener("submit",function(dets){
         document.querySelector("#hide").style.display="none";
     }
 
-})*/
+})
 
 //A closure is when an inner function remembers the variables of its outer function, even after the outer function is done.
 
@@ -104,3 +104,30 @@ toaster("downlode done !");
 setTimeout(()=>{
     toaster("Nabila accepted ur request");
 },2000);
+
+//oop
+function cakeCreate(brand, model, flavour, size, price) {
+    this.brand = brand;
+    this.model = model;
+    this.flavour = flavour;
+    this.size = size;
+    this.price = price;
+}
+let cake1 = new cakeCreate("all time", "234", "strawberry", "large", "123tk");
+//prototype
+function Pen(brand, color, price) {
+    this.brand = brand;
+    this.color = color;
+    this.price = price;
+
+}
+Pen.prototype.write = function (text) {
+    let h1 = document.createElement("h1");
+    h1.textContent = text;
+    h1.style.color = this.color;
+    document.body.append(h1);
+}
+let pencil1 = new Pen("matador", "white", 10);
+let pencil2 = new Pen("all time", "red", 20);
+//class 
+class 
