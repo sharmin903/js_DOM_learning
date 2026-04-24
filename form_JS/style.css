@@ -1,0 +1,86 @@
+
+    * { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Syne', sans-serif; }
+
+    body {
+      background-color: #0e0e0e;
+      background-image:
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 30% 20% at 80% 80%, rgba(120,80,255,0.06) 0%, transparent 60%);
+    }
+
+    .card-glass {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      backdrop-filter: blur(16px);
+    }
+
+    .input-field {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #e5e5e5;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: rgba(160,120,255,0.6);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 0 3px rgba(160,120,255,0.1);
+    }
+
+    .input-field::placeholder { color: rgba(255,255,255,0.2); }
+
+    .submit-btn {
+      background: linear-gradient(135deg, #7c4dff 0%, #9c6fff 100%);
+      transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(124,77,255,0.3);
+    }
+
+    .submit-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 28px rgba(124,77,255,0.45);
+    }
+
+    .submit-btn:active { transform: translateY(0); }
+
+    .user-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .user-card:hover {
+      border-color: rgba(160,120,255,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(160,120,255,0.1);
+    }
+
+    .avatar-ring {
+      padding: 3px;
+      background: linear-gradient(135deg, #7c4dff, #c084fc);
+      border-radius: 9999px;
+    }
+
+    .label-text {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Stagger animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.55s cubic-bezier(.22,1,.36,1) both; }
+    .delay-1 { animation-delay: 0.08s; }
+    .delay-2 { animation-delay: 0.18s; }
+    .delay-3 { animation-delay: 0.28s; }
+    .delay-4 { animation-delay: 0.38s; }
+    .delay-5 { animation-delay: 0.5s; }
+    .delay-6 { animation-delay: 0.6s; }

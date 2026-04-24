@@ -73,15 +73,23 @@ form.addEventListener("submit",function(dets){
 
 })*/
 
+//A closure is when an inner function remembers the variables of its outer function, even after the outer function is done.
+
 function createToaster(config){
+    const container=document.querySelector(".parents");
+    container.classList.add(
+        config.positionX === "right"?"right-5":"left-5",
+        config.positionY==="bottom"?"bottom-5":"top-5"
+    );
     return function(str){
         let div = document.createElement("div");
         div.textContent=str;
-        div.className= "inline-block bg-gray-800 text-white px-6 py-3 rounded shadow-lg pointer-events-none transition-opacity duration-300";
-        document.querySelector(".parents").appendChild(div);
+        div.className= `inline-block ${config.theme === "dark" ? "bg-gray-800 text-white":"bg-gray-100 text-black"} px-6 py-3 rounded shadow-lg pointer-events-none`;
+        container.appendChild(div);
+        
         setTimeout(() =>{
-            document.querySelector(".parents").removeChild(div);
-        },config.duration*10000);
+            container.removeChild(div);
+        },config.duration*1000);
 
     }
 
@@ -94,5 +102,5 @@ let toaster=createToaster({
 })
 toaster("downlode done !");
 setTimeout(()=>{
-    toaster("Nabila accepted ur requested");
+    toaster("Nabila accepted ur request");
 },2000);
